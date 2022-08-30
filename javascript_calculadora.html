@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Calculadora Javascript</title>
+</head>
+
+<body>
+
+</body>
+<!-- Incorporando códigos Javascript diretamente na página -->
+<script type="text/javascript">
+    numero1 = prompt("insira um numero: ");
+    numero2 = prompt("insira outro numero: ");
+    var tipo = prompt("Escolha a operação (digite +, -, / ou *)");
+
+    var resultadoNumero = 0;
+
+    if (tipo == '+') {
+        resultadoNumero = soma(numero1, numero2);
+    }
+    if (tipo == '-') {
+        resultadoNumero = subtracao(numero1, numero2);
+    }
+    if (tipo == '/') {
+        resultadoNumero = divisao(numero1, numero2);
+    }
+    if (tipo == '*') {
+        resultadoNumero = multiplicacao(numero1, numero2);
+    }
+
+    function soma(numero1, numero2) {
+        return parseInt(numero1) + parseInt(numero2);
+    }
+    function subtracao(numero1, numero2) {
+        return parseInt(numero1) - parseInt(numero2);
+    }
+    function divisao(numero1, numero2) {
+        return parseInt(numero1) / parseInt(numero2);
+    }
+    function multiplicacao(numero1, numero2) {
+        return parseInt(numero1) * parseInt(numero2);
+    }
+
+
+    alert("o resultado é: " + resultadoNumero);
+
+</script>
+
+</html>
