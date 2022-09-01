@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercicio 2</title>
+</head>
+
+<body>
+
+</body>
+<!-- Incorporando códigos Javascript diretamente na página -->
+<script type="text/javascript">
+
+/* Faça um programa em JavaScript que: 
+- Solicite ao usuário que insira dois números inteiros positivos;
+- Utilize um vetor para armazenar esses dois números;
+- Verifique se os números inseridos são inteiros positivos. Caso contrário, solicite ao usuário para inseri-los novamente;
+- Divida os dois números inteiros positivos;
+- Imprima na tela o resultado da divisão. */
+
+    var numeros = [];
+    numeros[0] = solicitaPrimeiroNumero();
+    numeros[1] = solicitaSegundoNumero();
+
+    var resultadoDivisao = divida(numeros);
+
+    alert("o resultado da divisão é: " + resultadoDivisao);
+
+    function solicitaPrimeiroNumero() {
+        var numero1 = prompt("insira um numero inteiro: ");
+        if (numero1 < 0) {
+            alert("numero invalido");
+            return solicitaPrimeiroNumero();
+        } else {
+            return numero1;
+        }
+    }
+
+    function solicitaSegundoNumero() {
+        var numero2 = prompt("insira outro numero inteiro: ");
+        if (numero2 < 0) {
+            alert("numero invalido");
+            return solicitaSegundoNumero();
+        } else {
+            return numero2;
+        }
+    }
+
+    function divida(numeros) {
+        var resultado = 0;
+        resultado = numeros[0] / numeros[1];
+        return resultado;
+    }
+
+</script>
+
+</html>
